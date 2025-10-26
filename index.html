@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Interactive Landing Page</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Modern Interactive Page</h1>
+    <p>Powered by JavaScript Libraries</p>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/hero1.jpg" alt="Hero 1"></div>
+        <div class="swiper-slide"><img src="images/hero2.jpg" alt="Hero 2"></div>
+        <div class="swiper-slide"><img src="images/hero3.jpg" alt="Hero 3"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="card" data-tilt data-aos="fade-up">
+      <h3>Fast Development</h3>
+      <p>Use libraries to save time and deliver better designs.</p>
+    </div>
+    <div class="card" data-tilt data-aos="fade-up" data-aos-delay="100">
+      <h3>Responsive Design</h3>
+      <p>Layouts that work beautifully on any device.</p>
+    </div>
+    <div class="card" data-tilt data-aos="fade-up" data-aos-delay="200">
+      <h3>Interactive UI</h3>
+      <p>Engaging experience with animations and effects.</p>
+    </div>
+  </section>
+
+  <section class="about" data-aos="fade-right">
+    <h2>About This Project</h2>
+    <p>This project showcases how combining simple JavaScript libraries can create a professional, interactive landing page. No frameworks — just pure web technologies.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 ModernJS Practicum | Built by Students</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+      autoplay: { delay: 2500 },
+    });
+
+    AOS.init({ duration: 1000 });
+    VanillaTilt.init(document.querySelectorAll(".card"));
+  </script>
+</body>
+</html>
